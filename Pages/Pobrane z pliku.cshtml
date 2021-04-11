@@ -1,0 +1,14 @@
+﻿@page
+@model WebApp_DependancyInjection.Pages.Pobrane_z_plikuModel
+@{
+}
+
+
+<div class="FullWithLeftMargin">
+    <h1>products.json file contents:</h1>
+
+    @foreach (var product in Model.productService.GetProducts())
+    {
+        <pre>@product.ToString()</pre>
+    }
+</div>

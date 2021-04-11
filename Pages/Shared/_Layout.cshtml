@@ -6,6 +6,15 @@
     <title>@ViewData["Title"] - WebApp_DependancyInjection</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        /* 
+            Nie jestem pewien czy użycie PascalCase'a jest tu odpowiednie, ale przynajmniej odróżnia 
+             customowe style od domyślnych :)
+        */
+        .FullWithLeftMargin {
+            margin-left: 20%
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,12 +33,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Pobrane z bazy danych">Data from DB</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Pobrane z pliku">Data from .json file</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

@@ -17,6 +17,6 @@ namespace WebApp_DependancyInjection.Models
         public string description { get; set; }
 
         public override string ToString()
-            => JsonSerializer.Serialize(this);
+            => JsonSerializer.Serialize(this, new JsonSerializerOptions{ WriteIndented = true });
     }
 }
