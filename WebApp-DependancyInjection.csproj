@@ -5,4 +5,8 @@
     <RootNamespace>WebApp_DependancyInjection</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
 </Project>
