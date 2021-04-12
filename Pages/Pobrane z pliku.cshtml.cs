@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using WebApp_DependancyInjection.Models;
 using WebApp_DependancyInjection.Services;
 
 namespace WebApp_DependancyInjection.Pages
@@ -12,7 +13,9 @@ namespace WebApp_DependancyInjection.Pages
     public class Pobrane_z_plikuModel : PageModel
     {
         readonly ILogger<IndexModel> _logger;
-        public readonly JsonFileProductService productService;
+        readonly JsonFileProductService productService;
+
+        public IEnumerable<Product> products { get; private set; }
 
         public Pobrane_z_plikuModel(
             ILogger<IndexModel> logger,
@@ -24,6 +27,7 @@ namespace WebApp_DependancyInjection.Pages
 
         public void OnGet()
         {
+            products = productService.GetProducts();
         }
     }
 }

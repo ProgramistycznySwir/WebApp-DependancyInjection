@@ -5,4 +5,9 @@
 
 <div class="FullWithLeftMargin">
     <h1>Database contents:</h1>
+
+    @foreach (var product in Model.products)
+    {
+        <pre>@product.ToString()</pre>
+    }
 </div>
